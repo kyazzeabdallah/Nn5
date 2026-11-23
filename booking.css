@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFF0;
+    color: #333333;
+}
+.navbar {
+    background-color: #800020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+.nav-links a {
+    color: #FFFFF0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+.nav-links a:hover {
+    color: #C9A84C;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+.hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 35px;
+    border-radius: 8px;
+}
+.hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.book-button {
+    display: inline-block;
+    background-color: #C9A84C;
+    color: #800020;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.book-button:hover {
+    background-color: #800020;
+    color: #FFFFF0;
+}
+.rooms-section {
+    padding: 60px 40px;
+    text-align: center;
+}
+.rooms-section h2,
+.comparison-section h2 {
+    color: #800020;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.section-description {
+    margin-bottom: 35px;
+    color: #555555;
+}
+.room-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.room-card {
+    background-color: white;
+    border: 1px solid #C9A84C;
+    border-radius: 8px;
+    padding: 35px 25px;
+
+    width: calc(50% - 15px);
+    min-height: 190px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.room-card h3 {
+    color: #800020;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.room-card h4 {
+    color: #C9A84C;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+.room-card p {
+    line-height: 1.6;
+    color: #555555;
+}
+.comparison-section {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: white;
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: #FFFFF0;
+}
+thead th {
+    background-color: #800020;
+    color: white;
+    padding: 18px;
+    border: 1px solid #C9A84C;
+}
+td {
+    padding: 16px;
+    border: 1px solid #C9A84C;
+    text-align: center;
+}
+tbody tr:nth-child(even) {
+    background-color: #f5f0df;
+}
+
+tbody tr:hover {
+    background-color: #eee5ca;
+}
+tbody td:first-child {
+    font-weight: bold;
+    text-align: left;
+}
+.yes {
+    color: green;
+    font-size: 22px;
+    font-weight: bold;
+}
+.no {
+    color: red;
+    font-size: 22px;
+    font-weight: bold;
+}
+.booking-section {
+    background-color: #800020;
+    color: white;
+    text-align: center;
+    padding: 60px 25px;
+}
+.booking-section h2 {
+    color: #C9A84C;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.booking-section p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-content h1 {
+        font-size: 26px;
+    }
+    .hero-content p {
+        font-size: 15px;
+    }
+    .room-card {
+        width: 100%;
+    }
+    .rooms-section,
+    .comparison-section {
+        padding: 40px 15px;
+    }
+    table {
+        min-width: 750px;
+    }
+
+}
